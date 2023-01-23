@@ -6,7 +6,7 @@
 
     <!--Properties，属性（可选），用来定义常量，之后在其他配置项中通过${变量名}引用-->
     <Properties>
-        <Property name="LOG_HOME">logs</Property>
+        <Property name="LOG_HOME">EurekaServerLog</Property>
         <!--_TRACE_ID，业务自定义变量-->
         <property name="ALL_PATTERN">[%d][%level][%thread][%X{_TRACE_ID}][%c{1.}]- %msg -%n</property>
         <property name="ERROR_PATTERN">[%d][%level][%thread][%X{_TRACE_ID}][%c{1.}]- %msg -[%l]%n</property>
