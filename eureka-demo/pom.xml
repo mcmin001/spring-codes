@@ -15,6 +15,7 @@
     <modules>
         <module>eureka-server</module>
         <module>eureka-common</module>
+
         <module>server-consumer</module>
         <module>server-provider</module>
         <module>server-common</module>
@@ -72,5 +73,22 @@
 
 
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

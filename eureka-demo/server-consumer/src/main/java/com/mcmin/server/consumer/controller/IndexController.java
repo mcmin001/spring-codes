@@ -15,6 +15,7 @@ import java.util.List;
 @RequestMapping("/index")
 @Slf4j
 public class IndexController {
+    private final static String ServerProvider = "http://ServerProvider";
     @Autowired
     private DiscoveryClient discoveryClient;
 
