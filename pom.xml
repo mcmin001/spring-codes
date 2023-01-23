@@ -59,7 +59,6 @@
                 <version>1.7.5</version>
             </dependency>
 
-
             <!--spring cloud 主版本控制-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
