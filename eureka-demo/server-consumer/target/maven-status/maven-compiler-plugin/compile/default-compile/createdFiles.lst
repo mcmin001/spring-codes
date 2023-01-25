@@ -1,0 +1,5 @@
+com\mcmin\server\consumer\core\BeanConfiguration.class
+com\mcmin\server\consumer\service\impl\TimeRequestServiceImpl.class
+com\mcmin\server\consumer\ServerConsumer.class
+com\mcmin\server\consumer\service\TimeRequestService.class
+com\mcmin\server\consumer\controller\IndexController.class
