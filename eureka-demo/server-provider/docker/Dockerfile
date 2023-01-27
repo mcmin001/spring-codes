@@ -2,18 +2,19 @@ FROM java:8
 
 #定义环境变量-服务部署目录
 ENV APP_SERVER_DEPLOY_DIR=/data/project/server-provider
+ENV APP_SERVER_CONFIG_DIR=/data/project/server-provider/config
 
-COPY ./* $APP_SERVER_DEPLOY_DIR
 COPY docker-entrypoint.sh /
+COPY config $APP_SERVER_CONFIG_DIR
+COPY server-provider-1.0-SNAPSHOT.jar ${APP_SERVER_DEPLOY_DIR}/
 
 #创建目录
 RUN set -x && \
     mkdir -p $APP_SERVER_DEPLOY_DIR && \
+    mkdir -p $APP_SERVER_DEPLOY_DIR/config && \
     chmod 777 docker-entrypoint.sh
 
 #暴露容器端口
 EXPOSE 8081
 
-ADD server-provider-1.0-SNAPSHOT.jar /data/project/server-provider-1.0-SNAPSHOT.jar
-
-ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
